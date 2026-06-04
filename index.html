@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate AI Sudoku Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h2>🧠 AI Sudoku Master</h2>
+        <button class="btn btn-primary" id="theme-toggle">🌓 Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        <div class="stats-bar">
+            <div>Difficulty: <span id="current-diff">Easy</span></div>
+            <div>Moves: <span id="move-count">0</span></div>
+            <div>Time: <span id="timer">00:00</span></div>
+        </div>
+        
+        <div class="sudoku-grid" id="grid"></div>
+        
+        <div class="controls">
+            <select id="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button class="btn btn-primary" id="btn-new">New Game</button>
+            <button class="btn btn-accent" id="btn-check">Check Solution</button>
+            <button class="btn btn-primary" id="btn-hint">Hint</button>
+            <button class="btn btn-primary" id="btn-reset">Reset</button>
+            <button class="btn btn-danger" id="btn-solve">Solve (AI)</button>
+        </div>
+    </main>
+
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3>Persistence</h3>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-accent" id="btn-save" style="flex:1;">Save Game</button>
+                <button class="btn btn-primary" id="btn-load" style="flex:1;">Load Game</button>
+            </div>
+        </div>
+        
+        <div class="sidebar-section">
+            <h3>Leaderboard (Fastest Times)</h3>
+            <ol id="leaderboard-list">
+                <li>No records yet!</li>
+            </ol>
+        </div>
+
+        <div class="sidebar-section" style="font-size: 0.9rem;">
+            <strong>AI Settings:</strong>
+            <label style="display:block; margin-top:5px;">
+                <input type="checkbox" id="chk-visualize" checked> Visualize AI Steps
+            </label>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
